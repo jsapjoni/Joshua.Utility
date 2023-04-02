@@ -1,4 +1,4 @@
-function ConnectTo-Tenant {
+function Connect-ToTenant {
   [Alias("ctt")]
   param(
     [Parameter()]
