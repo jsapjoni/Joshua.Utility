@@ -9,4 +9,5 @@ function Pick-PNPListItem {
   Write-Host "$list " -ForegroundColor Green -NoNewline
   Write-Host "from site: " -NoNewline
   Write-Host "$site" -ForegroundColor Green
+  $listitem = $list | Invoke-Fzf
 }
