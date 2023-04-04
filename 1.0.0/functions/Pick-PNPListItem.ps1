@@ -16,5 +16,7 @@ function Pick-PNPListItem {
   $listitem = (Get-PnPListItem -List $list).FieldValues | ForEach-Object {$_["FileRef"]} | Invoke-Fzf
   
   Write-Host "Selected document: " -NoNewline
-  Write-Host "$listitem" -ForegroundColor Green 
+  Write-Host "$listitem" -ForegroundColor Green
+
+  return @{"Site" = $site ; "List" = $list ; "Item" = $listitem}
 }
