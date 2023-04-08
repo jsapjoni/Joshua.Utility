@@ -15,8 +15,7 @@ function SelectFZFPNPList {
   }
 
   $list = Get-PnPList | ForEach-Object {
-    $_.Title, $_.RootFolder.ServerRelativeUrl -join "|"
+    $_.Title
   } | Invoke-Fzf
-  $listurl = $list.Split("|")[-1]      
-  return $listurl
+  return $list
 }
